@@ -1,0 +1,41 @@
+# This section defines the package metadata for the Rust project
+[package]
+name = "rustmerger"  # The name of the package
+version = "0.1.1"    # The current version of the package
+edition = "2021"     # The Rust edition to use (2021 edition)
+author = "Robert Pimentel @pr0b3r7 | github.com/pr0b3r7 | linkedin.com/in/pimentelrobert1 | www.hackerhermanos.com"
+
+# This section lists the dependencies required by the project
+[dependencies]
+zip = "2.2.0"  # Library for working with ZIP archives
+uuid = { version = "1.11.0", features = ["v4"] }  # Library for generating and handling UUIDs, using version 4
+url = "2.5.2"  # Library for URL parsing and manipulation
+unrar = "0.5.6"  # Library for working with RAR archives
+tokio-util = "0.7.12"  # Utilities for working with the Tokio async runtime
+tokio = { version = "1.36", features = ["full"] }  # Tokio async runtime with full feature set
+thiserror = "1.0.65"  # Library for deriving custom error types
+terminal_size = "0.4.0"  # Library for getting the terminal size
+tempfile = "3.13"  # Library for creating temporary files
+tar = "0.4.42"  # Library for working with TAR archives
+signal-hook = "0.3.17"  # Library for handling OS signals
+sha2 = "0.10.8"  # Library for SHA-2 hashing
+sevenz-rust = "0.6.1"  # Library for working with 7z archives
+serde_json = "1.0.132"  # Library for JSON serialization and deserialization using Serde
+serde = { version = "1.0", features = ["derive"] }  # Serde library for serialization and deserialization, with derive feature
+reqwest = { version = "0.12.9", features = ["json", "stream"] }  # HTTP client library with JSON and streaming support
+log = "0.4.22"  # Logging library
+lazy_static = "1.5.0"  # Library for defining statics that require code to be executed at runtime
+indicatif = "0.17"  # Library for creating progress bars and spinners
+hex = "0.4.3"  # Library for encoding and decoding hexadecimal
+futures = "0.3"  # Library for working with asynchronous computations
+env_logger = "0.11.5"  # Library for logging with environment variable configuration
+encoding_rs = "0.8.35"  # Library for encoding and decoding character sets
+dialoguer = "0.11.0"  # Library for creating interactive command-line prompts
+ctrlc = { version = "3.4.5", features = ["termination"] }  # Library for handling Ctrl+C signals with termination feature
+crossterm = "0.28.1"  # Library for cross-platform terminal manipulation
+clap = { version = "4.4", features = ["derive"] }  # Library for command-line argument parsing with derive feature
+chrono = { version = "0.4.38", features = ["serde"] }  # Library for date and time handling with Serde support
+bytes = "1.8.0"  # Library for working with byte buffers
+async-compression = { version = "0.4.17", features = ["tokio", "bzip2", "gzip", "xz"] }  # Library for async compression with support for multiple formats
+anyhow = "1.0.91"  # Library for error handling with context support
+sys-info = "0.9.1"  # Library for system information

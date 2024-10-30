@@ -1,0 +1,7 @@
+{
+  "input_files": "/tmp/wordlists_to_merge_dev.txt",
+  "output_files": "/tmp/merged_wordlist.txt",
+  "threads": 90,
+  "verbose": true,
+  "debug": true
+}
