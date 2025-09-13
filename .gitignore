@@ -1,0 +1,294 @@
+# ============================================================================
+# .gitignore for rustmerger - Wordlist and Rule Merger Tool
+# Purpose: Prevent sensitive data and build artifacts from being committed
+# Author: Robert Pimentel (@pr0b3r7)
+# ============================================================================
+
+# CRITICAL SECURITY: Wordlists often contain sensitive data
+# These files should NEVER be committed to public repositories
+
+# Wordlist and password files
+wordlists/
+passwords/
+dictionaries/
+*.txt
+*.dic
+*.lst
+*.wordlist
+*.passwd
+*.passwords
+
+# Rule files (often custom/sensitive)
+rules/
+*.rule
+*.rules
+
+# Merged output files
+merged_*
+output_*
+deduplicated_*
+combined_*
+processed_*
+
+# Test data directories
+test_data/
+sample_data/
+examples/data/
+
+# ============================================================================
+# RUST/CARGO BUILD ARTIFACTS
+# ============================================================================
+
+# Compiled outputs and build artifacts
+target/
+**/*.rs.bk
+*.pdb
+*.d
+*.rlib
+*.rmeta
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Cargo package and registry cache (optional, can be large)
+.cargo/
+.cargo_vcs_info.json
+.cargo-lock.backup
+
+# Cargo build output for workspaces
+**/target/
+
+# Cargo incremental compilation files
+target/**/incremental/
+target/**/.fingerprint/
+target/**/build/
+target/**/deps/
+target/**/examples/
+target/**/release/
+target/**/debug/
+target/**/doc/
+target/**/package/
+
+# Cargo lock file (include for applications, exclude for libraries)
+# Since this is an application, we'll exclude it to avoid version conflicts
+Cargo.lock
+
+# Generated documentation
+doc/
+docs/target/
+
+# Rust coverage and fuzzing outputs
+coverage/
+fuzz/
+*.profraw
+*.profdata
+
+# Rustfmt and Clippy artifacts
+rustfmt.toml.bk
+clippy.toml.bk
+
+# Rust Analyzer
+.rust-analyzer.json
+.rust-analyzer/
+
+# Cargo local config
+.cargo/config.toml
+.cargo/config
+
+# ============================================================================
+# IDE AND EDITOR FILES
+# ============================================================================
+
+# Visual Studio Code
+.vscode/
+.vscode-test/
+*.code-workspace
+
+# IntelliJ IDEA / CLion / PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Vim
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# ============================================================================
+# DEVELOPMENT TOOLS
+# ============================================================================
+CLAUDE.md
+*claude*.md
+*CLAUDE*.md
+.claude/
+.claude-*
+claude-code.log
+claude-code.json
+.claude-history
+claude_context.md
+claude_session.json
+claude_workspace.json
+
+
+GIT_COMMIT_INSTRUCTIONS.md
+AI_INSTRUCTIONS.md
+
+# Development state and tracking files
+todo.md
+**/todo.md
+TODO.md
+**/TODO.md
+task_list.md
+progress_tracker.md
+development_state.json
+session_state.json
+
+# Test results and reports
+test_results.log
+test_results.md
+validation_report.md
+encoding_test_results.md
+wordlist_test_results.md
+*.dev.log
+development.log
+encoding_debug.log
+
+# ============================================================================
+# OPERATING SYSTEM FILES
+# ============================================================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd/
+.TemporaryItems/
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================================================
+# APPLICATION-SPECIFIC FILES
+# ============================================================================
+
+# Progress and checkpoint files
+*.progress
+*.checkpoint
+progress_*.json
+checkpoint_*.json
+state_*.json
+
+# Configuration files with sensitive data
+config.local.json
+*.local.json
+secrets.json
+credentials.json
+
+# Log files
+*.log
+error.log
+debug.log
+rustmerger.log
+merger.log
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+temp/
+tmp/
+
+# ============================================================================
+# COMPRESSION AND ARCHIVE FILES
+# ============================================================================
+
+# Common archive formats that might contain wordlists
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.gz
+*.bz2
+*.xz
+
+
+# ============================================================================
+# TESTING AND COVERAGE
+# ============================================================================
+
+# Test outputs
+test_output/
+test_results/
+coverage/
+*.coverage
+
+# Criterion benchmark results (Rust)
+criterion/
+
+
+
+# ============================================================================
+# IMPORTANT NOTES FOR CONTRIBUTORS
+# ============================================================================
+
+# SECURITY REMINDER:
+# - This tool processes wordlists which often contain sensitive data
+# - Use .local.json suffix for configuration files with sensitive data
+# - Clear temporary files after testing
+# - Be especially careful with test data that might contain real passwords
+
+# DEVELOPMENT:
+# - Test with small, safe datasets first
+# - Use cargo clean to remove all build artifacts
+# - Consider using docker for isolated testing environments
+# - Monitor memory usage when processing large files
+
+# ============================================================================
+# END OF .gitignore
+# ============================================================================

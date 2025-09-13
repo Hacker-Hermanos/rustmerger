@@ -1,0 +1,34 @@
+# This section defines the package metadata for the Rust project
+[package]
+name = "rustmerger"  # The name of the package
+version = "0.1.2"    # The current version of the package
+edition = "2021"     # The Rust edition to use (2021 edition)
+authors = ["Robert Pimentel <pr0b3r7@github.com>"]
+
+# This section lists the dependencies required by the project
+[dependencies]
+clap = { version = "4.5.47", features = ["derive"] }  # Library for command-line argument parsing with derive feature
+anyhow = "1.0.99"  # Library for error handling with context support
+log = "0.4"  # Logging library
+env_logger = "0.11"  # Library for logging with environment variable configuration
+tokio = { version = "1.47.1", features = ["full"] }  # Tokio async runtime with full feature set
+serde = { version = "1.0.219", features = ["derive"] }  # Serde library for serialization and deserialization, with derive feature
+serde_json = "1.0.134"  # Library for JSON serialization and deserialization using Serde
+thiserror = "2.0.16"  # Library for deriving custom error types
+indicatif = "0.18.0"  # Library for creating progress bars and spinners
+crossterm = "0.29.0"  # Library for cross-platform terminal manipulation
+ctrlc = "3.4.5"  # Library for handling Ctrl+C signals
+signal-hook = "0.3.17"  # Library for handling OS signals
+lazy_static = "1.5.0"  # Library for defining statics that require code to be executed at runtime
+bytes = "1.9.1"  # Library for working with byte buffers
+futures = "0.3.31"  # Library for working with asynchronous computations
+chrono = "0.4.42"  # Library for date and time handling
+sys-info = "0.9.1"  # Library for system information
+dialoguer = "0.12.0"  # Library for creating interactive command-line prompts
+tempfile = "3.15.0"  # Library for creating temporary files
+terminal_size = "0.4.1"  # Library for getting the terminal size
+
+# Encoding support for Issue #1: https://github.com/Hacker-Hermanos/rustmerger/issues/1
+encoding_rs = "0.8"  # Firefox's encoding library for proper charset conversion
+encoding_rs_io = "0.1"  # I/O wrapper for streaming charset conversion
+chardetng = "0.1"  # Encoding detection library for legacy Web content
