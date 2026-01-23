@@ -148,6 +148,30 @@ claude_context.md
 claude_session.json
 claude_workspace.json
 
+# ============================================================================
+# OPENCODE - AI Coding Assistant
+# ============================================================================
+opencode/
+.opencode/
+
+# OpenCode configuration and cache
+node_modules/
+*.log
+opencode.json
+opencode.local.json
+.bun/
+bun.lockb
+
+# ============================================================================
+# CURSOR IDE - AI-powered Code Editor
+# ============================================================================
+cursor/
+.cursor/
+
+# Cursor cache and state
+.cursor/
+.cursor_state.json
+
 
 GIT_COMMIT_INSTRUCTIONS.md
 AI_INSTRUCTIONS.md
